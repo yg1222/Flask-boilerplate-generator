@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html lang="en-US" class="no-js">
+
+<head>
+    {% block head %}
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}{% endblock %} - Logisco</title>
+    <!-- site metas -->
+    <meta content="" name="ontario logistics freight broker" />
+    <meta content="" name="Logisco" />
+    <meta content="" name="" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    
+    
+    {% endblock %}
+    </link>
+</head>
+
+
+<body class="home page-template-default page page-id-2039 gdlr-core-body logisco-body logisco-body-front logisco-full logisco-with-sticky-navigation logisco-blockquote-style-2 gdlr-core-link-to-lightbox" data-home-url="index.html">
+    <div class="logisco-mobile-header-wrap">
+        <div class="logisco-mobile-header logisco-header-background logisco-style-slide logisco-sticky-mobile-navigation"
+            id="logisco-mobile-header">
+            <div class="logisco-mobile-header-container logisco-container clearfix">
+                <div class="logisco-logo logisco-item-pdlr">
+                    <div class="logisco-logo-inner">
+                        <a class="" href="/"><img alt="" height="84"
+                                src="{{ url_for('static', filename='img/logo-hor.png') }}" title="logo-big"
+                                width="320" /></a>
+                    </div>
+                </div>
+                <div class="logisco-mobile-menu-right">
+                    <div class="logisco-main-menu-search" id="logisco-mobile-top-search"><i class="fa fa-search"></i>
+                    </div>
+                    <div class="logisco-top-search-wrap">
+                        <div class="logisco-top-search-close"></div>
+                        <div class="logisco-top-search-row">
+                            <div class="logisco-top-search-cell">
+                                <form action="#" class="search-form" method="get" role="search">
+                                    <input class="search-field logisco-title-font" name="s" placeholder="Search..."
+                                        type="text" value="" />
+                                    <div class="logisco-top-search-submit"><i class="fa fa-search"></i></div>
+                                    <input class="search-submit" type="submit" value="Search" />
+                                    <div class="logisco-top-search-close"><i class="icon_close"></i></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logisco-mobile-menu"><a
+                            class="logisco-mm-menu-button logisco-mobile-menu-button logisco-mobile-button-hamburger"
+                            href="/#logisco-mobile-menu"><span></span></a>
+                        <div class="logisco-mm-menu-wrap logisco-navigation-font" data-slide="right"
+                            id="logisco-mobile-menu">
+                            <ul class="m-menu" id="menu-main-navigation">
+                                <li
+                                    class="menu-item menu-item-home {% if current_route == '/' %} current-menu-item{% endif %}">
+                                    <a href="/">Home</a>
+                                </li>
+                                <li class="menu-item menu-item-has-children"><a href="/our-services">Our
+                                        Services</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="/land-transport">Land Transport</a></li>
+                                        <li class="menu-item"><a href="/air-freight">Air Freight</a></li>
+                                        <li class="menu-item"><a href="/ocean-freight">Ocean Freight</a></li>
+                                        <li class="menu-item"><a href="/smart-warehouses">Smart Warehouses</a></li>
+                                        <li class="menu-item"><a href="/special-products">Special Products</a></li>
+                                        <li class="menu-item"><a href="/systems-technologies">Systems &amp;
+                                                Technologies</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-has-children"><a href="/industry-solutions">Industry</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="/aerospace-defense">Aerospace &amp;
+                                                Defense</a>
+                                        </li>
+                                        <li class="menu-item"><a href="/automotive">Automotive</a></li>
+                                        <li class="menu-item"><a href="/oil-gas">Oil &amp; Gas</a></li>
+                                        <li class="menu-item"><a href="/retail-fashion">Retail &amp; Fashion</a>
+                                        </li>
+                                        <li class="menu-item"><a href="/healthcare">Healthcare</a></li>
+                                        <li class="menu-item"><a href="/consumer">Consumer</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-has-children"><a href="/portfolio-3-columns">Case
+                                        Study</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item menu-item-has-children"><a>Portfolio Grid</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item"><a href="/portfolio-2-columns">Portfolio 2
+                                                        Columns</a></li>
+                                                <li class="menu-item"><a href="/portfolio-3-columns">Portfolio 3
+                                                        Columns</a></li>
+                                                <li class="menu-item"><a href="/portfolio-4-columns">Portfolio 4
+                                                        Columns</a></li>
+                                                <li class="menu-item"><a
+                                                        href="/portfolio-2-columns-with-frame">Portfolio 2 Columns
+                                                        With
+                                                        Frame</a></li>
+                                                <li class="menu-item"><a
+                                                        href="/portfolio-3-columns-with-frame">Portfolio 3 Columns
+                                                        With
+                                                        Frame</a></li>
+                                                <li class="menu-item"><a
+                                                        href="/portfolio-4-columns-with-frame">Portfolio 4 Columns
+                                                        With
+                                                        Frame</a></li>
+                                                <li class="menu-item"><a href="/portfolio-2-columns-no-space">Portfolio
+                                                        2 Columns No Space</a></li>
+                                                <li class="menu-item"><a href="/portfolio-3-columns-no-space">Portfolio
+                                                        3 Columns No Space</a></li>
+                                                <li class="menu-item"><a href="/portfolio-4-columns-no-space">Portfolio
+                                                        4 Columns No Space</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item menu-item-has-children"><a>Portfolio Masonry</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item"><a href="/portfolio-masonry-4-columns">Masonry
+                                                        4
+                                                        Columns</a></li>
+                                                <li class="menu-item"><a href="/portfolio-masonry-3-columns">Masonry
+                                                        3
+                                                        Columns</a></li>
+                                                <li class="menu-item"><a
+                                                        href="/portfolio-masonry-4-columns-no-space">Masonry 4
+                                                        Columns
+                                                        No Space</a></li>
+                                                <li class="menu-item"><a
+                                                        href="/portfolio-masonry-3-columns-no-space">Masonry 3
+                                                        Columns
+                                                        No Space</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item"><a href="/portfolio-right-large-thumbnail">Portfolio
+                                                Right
+                                                Thumbnail</a></li>
+                                        <li class="menu-item"><a href="/singleport">Single Portfolio</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-has-children"><a href="/#">Blog</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item menu-item-has-children"><a
+                                                href="/blog-grid-3-columns-no-space">Blog Grid</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item"><a href="/blog-grid-2-columns">Blog Grid 2
+                                                        Columns</a></li>
+                                                <li class="menu-item"><a href="/blog-grid-3-columns">Blog Grid 3
+                                                        Columns</a></li>
+                                                <li class="menu-item"><a href="/blog-grid-4-columns">Blog Grid 4
+                                                        Columns</a></li>
+                                                <li class="menu-item"><a href="/blog-grid-2-columns-no-space">Blog
+                                                        Grid
+                                                        2 Columns No Space</a></li>
+                                                <li class="menu-item"><a href="/blog-grid-3-columns-no-space">Blog
+                                                        Grid
+                                                        3 Columns No Space</a></li>
+                                                <li class="menu-item"><a href="/blog-grid-4-columns-no-space">Blog
+                                                        Grid
+                                                        4 Columns No Space</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item menu-item-has-children"><a
+                                                href="/blog-3-columns-with-frame">Blog Columns</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item"><a href="/blog-2-columns-with-frame">Blog 2
+                                                        Columns With Frame</a></li>
+                                                <li class="menu-item"><a href="/blog-3-columns-with-frame">Blog 3
+                                                        Columns With Frame</a></li>
+                                                <li class="menu-item"><a href="/blog-4-columns-with-frame">Blog 4
+                                                        Columns With Frame</a></li>
+                                                <li class="menu-item"><a href="/blog-2-columns">Blog 2 Columns</a>
+                                                </li>
+                                                <li class="menu-item"><a href="/blog-3-columns">Blog 3 Columns</a>
+                                                </li>
+                                                <li class="menu-item"><a href="/blog-4-columns">Blog 4 Columns</a>
+                                                </li>
+                                                <li class="menu-item"><a href="/blog-full-right-sidebar">Blog Full
+                                                        Right
+                                                        Sidebar</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item" data-size="60"><a class="sf-with-ul-pre"
+                                                href="/standard-post-type">Single Posts</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="logisco-body-outer-wrapper">
+        <div class="logisco-body-wrapper clearfix logisco-with-transparent-header logisco-with-frame">
+
+            <div class="logisco-header-background-transparent">
+                <div class="logisco-top-bar">
+                    <div class="logisco-top-bar-background"></div>
+                    <div class="logisco-top-bar-container logisco-top-bar-full">
+                        <div class="logisco-top-bar-container-inner clearfix">
+                            <div class="logisco-top-bar-left logisco-item-pdlr">
+                                <div class="gdlr-core-dropdown-tab gdlr-core-js clearfix">
+                                    <div class="gdlr-core-dropdown-tab-title"><span
+                                            class="gdlr-core-head">Ontario</span>
+                                        <div class="gdlr-core-dropdown-tab-head-wrap">
+                                            <div class="gdlr-core-dropdown-tab-head gdlr-core-active" data-index="0">
+                                                Ontario</div>
+                                            <div class="gdlr-core-dropdown-tab-head" data-index="1">Alberta</div>
+                                        </div>
+                                    </div>
+                                    <div class="gdlr-core-dropdown-tab-content-wrap">
+                                        <div class="gdlr-core-dropdown-tab-content gdlr-core-active" data-index="0">
+                                            <i class="icon_clock" id="i_fdfd_0"></i>Mon - Fri / 08:00 - 18:00
+                                            <div id="div_fdfd_0">|</div><i class="fa fa-envelope-open"
+                                                id="i_fdfd_1"></i><a
+                                                href="mailto:info@logisco.com">info@logisco.com</a>
+                                            <div id="div_fdfd_1">|</div><i class="fa fa-phone"
+                                                id="i_fdfd_2"></i>890-123-4567
+                                        </div>
+                                        <div class="gdlr-core-dropdown-tab-content" data-index="1"> <i
+                                                class="icon_clock" id="i_fdfd_3"></i>Mon - Fri / 09:00 - 19:00
+                                            <div id="div_fdfd_2">|</div><i class="fa fa-envelope-open"
+                                                id="i_fdfd_4"></i><a
+                                                href="mailto:info@logisco.com">info@logisco.com</a>
+                                            <div id="div_fdfd_3">|</div><i class="fa fa-phone"
+                                                id="i_fdfd_5"></i>890-123-4567
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><a class="logisco-top-bar-right-button" href="/get-a-quote" target="_self">Get A
+                                Quote</a>
+                            <div class="logisco-top-bar-right logisco-item-pdlr">
+                                <div class="logisco-top-bar-right-social"><a class="logisco-top-bar-social-icon"
+                                        href="/#" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a><a
+                                        class="logisco-top-bar-social-icon" href="/#" target="_blank"
+                                        title="linkedin"><i class="fa fa-linkedin"></i></a><a
+                                        class="logisco-top-bar-social-icon" href="/#" target="_blank" title="twitter"><i
+                                            class="fa fa-twitter"></i></a><a class="logisco-top-bar-social-icon"
+                                        href="/#" target="_blank" title="instagram"><i class="fa fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <header
+                    class="logisco-header-wrap logisco-header-style-plain logisco-style-menu-right logisco-sticky-navigation logisco-style-slide"
+                    data-navigation-offset="75">
+                    <div class="logisco-header-background"></div>
+                    <div class="logisco-header-container logisco-header-full">
+                        <div class="logisco-header-container-inner clearfix">
+                            <div class="logisco-logo logisco-item-pdlr">
+                                <div class="logisco-logo-inner">
+                                    <a class="" href="/"><img alt="" height="84"
+                                            src="{{ url_for('static', filename='img/logo-hor.png') }}" title="logo-big"
+                                            width="320" /></a>
+                                </div>
+                            </div>
+                            <div class="logisco-navigation logisco-item-pdlr clearfix">
+                                <div class="logisco-main-menu" id="logisco-main-menu">
+                                    <ul class="sf-menu" id="menu-main-navigation-1">
+                                        <li class="menu-item menu-item-home current-menu-item logisco-normal-menu">
+                                            <a href="/">Home</a>
+                                        </li>
+
+                                        <li class="menu-item logisco-normal-menu"><a class="sf-with-ul-pre"
+                                                href="{{ url_for('index')+'#services-section' }}">Our Services</a>
+                                            <!-- <ul class="sub-menu">
+                                                <li class="menu-item" data-size="60"><a href="/land-transport">Land
+                                                        Transport</a></li>
+                                                <li class="menu-item" data-size="60"><a href="/air-freight">Air
+                                                        Freight</a></li>
+                                                <li class="menu-item" data-size="60"><a href="/ocean-freight">Ocean
+                                                        Freight</a></li>
+                                                <li class="menu-item" data-size="60"><a
+                                                        href="/smart-warehouses">Smart
+                                                        Warehouses</a></li>
+                                                <li class="menu-item" data-size="60"><a
+                                                        href="/special-products">Special
+                                                        Products</a></li>
+                                                <li class="menu-item" data-size="60"><a
+                                                        href="/systems-technologies">Systems &amp; Technologies</a>
+                                                </li>
+                                            </ul> -->
+                                        </li>
+                                        {% if not current_user.is_authenticated %}
+                                        <li class="menu-item menu-item-has-children logisco-normal-menu"><a
+                                                class="sf-with-ul-pre" href="/signup">Signup</a>
+                                        </li>
+                                        {% endif %}
+                                       
+                                        {% if current_user.is_authenticated %}
+                                        {% if current_user.id == 4 %}
+                                        <li class="menu-item menu-item-has-children logisco-normal-menu"><a
+                                            class="sf-with-ul-pre" href="/dashboard">Dash</a>
+                                        </li>
+                                        {% endif %}
+                                        <li class="menu-item menu-item-has-children logisco-normal-menu"><a
+                                            class="sf-with-ul-pre" href="/logout">Logout</a>
+                                        </li>
+                                        {% else %}
+                                        <li class="menu-item menu-item-has-children logisco-normal-menu"><a
+                                            class="sf-with-ul-pre" href="/login">Login</a>
+                                        </li>
+                                        {% endif %}
+
+                                    </ul>
+                                    <div class="logisco-navigation-slide-bar" id="logisco-navigation-slide-bar">
+                                    </div>
+                                </div>
+                                <div class="logisco-main-menu-right-wrap clearfix">
+                                    <div class="logisco-main-menu-search" id="logisco-top-search"><i
+                                            class="fa fa-search"></i></div>
+                                    <div class="logisco-top-search-wrap">
+                                        <div class="logisco-top-search-close"></div>
+                                        <div class="logisco-top-search-row">
+                                            <div class="logisco-top-search-cell">
+                                                <form action="#" class="search-form" method="get" role="search">
+                                                    <input class="search-field logisco-title-font" name="s"
+                                                        placeholder="Search..." type="text" value="" />
+                                                    <div class="logisco-top-search-submit"><i class="fa fa-search"></i>
+                                                    </div>
+                                                    <input class="search-submit" type="submit" value="Search" />
+                                                    <div class="logisco-top-search-close"><i class="icon_close"></i>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+
+            {% block content %}{% endblock %}
+
+            <footer>
+                <div class="logisco-footer-wrapper">
+                    <div class="logisco-footer-container logisco-container clearfix">
+                        <div class="logisco-footer-column logisco-item-pdlr logisco-column-15">
+                            <div class="widget widget_text logisco-widget" id="text-1">
+                                <div class="textwidget">
+                                    <p><img alt="" class="alignnone size-full wp-image-5803"
+                                            src="{{ url_for('static', filename='img/logo-hor.png') }}" width="138" />
+                                        <br /> <span class="gdlr-core-space-shortcode" style="margin-top: -27px ;"></span>
+                                        <br /> Logisco is one of the world’s leading logistics companies. Its strong
+                                        market position lies in the seafreight, airfreight, contract logistics and
+                                        overland businesses.
+                                    </p>
+                                    <div class="gdlr-core-social-network-item gdlr-core-item-pdb gdlr-core-none-align"
+                                        style="padding-bottom: 0px ;"><a class="gdlr-core-social-network-icon" href="/#url"
+                                            style="font-size: 16px ;color: #fff ;" target="_blank" title="facebook"><i
+                                                class="fa fa-facebook"></i></a><a class="gdlr-core-social-network-icon"
+                                            href="/#" style="font-size: 16px ;color: #fff ;" target="_blank" title="linkedin"><i
+                                                class="fa fa-linkedin"></i></a><a class="gdlr-core-social-network-icon"
+                                            href="/#" style="font-size: 16px ;color: #fff ;" target="_blank" title="skype"><i
+                                                class="fa fa-skype"></i></a><a class="gdlr-core-social-network-icon"
+                                            href="/#url" style="font-size: 16px ;color: #fff ;" target="_blank"
+                                            title="twitter"><i class="fa fa-twitter"></i></a><a
+                                            class="gdlr-core-social-network-icon" href="/#"
+                                            style="font-size: 16px ;color: #fff ;" target="_blank" title="vimeo"><i
+                                                class="fa fa-vimeo"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="logisco-footer-column logisco-item-pdlr logisco-column-15">
+                            <div class="widget widget_text logisco-widget" id="text-5">
+                                <h3 class="logisco-widget-title">Contact Info</h3><span class="clear"></span>
+                                <div class="textwidget">
+                                    
+                                    <p><span style="color: #fff;">+1-890-123-4567</span>
+                                        <br /> <span style="color: #e53d34;">info@logisco.ca</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="logisco-footer-column logisco-item-pdlr logisco-column-30">
+                            <div class="widget widget_gdlr-core-custom-menu-widget logisco-widget"
+                                id="gdlr-core-custom-menu-widget-2">
+                                <h3 class="logisco-widget-title">Useful Links</h3><span class="clear"></span>
+                                <div class="menu-useful-links-container">
+                                    <ul class="gdlr-core-custom-menu-widget gdlr-core-menu-style-half" id="menu-useful-links">
+                                        <li class="menu-item"><a href="/our-services">Our Services</a></li>
+                                        <li class="menu-item"><a href="/portfolio-modern-3-columns">Case Study</a></li>
+                                        <li class="menu-item"><a href="/industry-solutions">Industry Solutions</a></li>
+                                        <li class="menu-item"><a href="/career">Seeking For Career</a></li>
+                                        <li class="menu-item"><a href="/#">Investor Relation</a></li>
+                                        <li class="menu-item"><a href="/#">Our Clients</a></li>
+                                        <li class="menu-item"><a href="/get-a-quote">Get A Quote</a></li>
+                                        <li class="menu-item"><a href="/#">FAQ</a></li>
+                                        <li class="menu-item"><a href="/contact">Contact</a></li>
+                                        <li class="menu-item"><a href="/#">Media Relation</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="logisco-copyright-wrapper">
+                    <div class="logisco-copyright-container logisco-container clearfix">
+                        <div class="logisco-copyright-left logisco-item-pdlr">&copy; {{current_year}} Logisco,
+                            All Right Reserved.
+                        </div>
+                        <div class="logisco-copyright-right logisco-item-pdlr"><a href="/#" style="margin-left:21px;">Home</a><a
+                                href="/#" style="margin-left:21px;">About </a><a href="/#"
+                                style="margin-left:21px;">Updates</a><a href="/#" style="margin-left:21px;">Services</a><a
+                                href="/#" style="margin-left:21px;">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/inline_relocates.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery/jquery-migrate.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='plugins/goodlayers-core/plugins/combine/script.js') }}"></script>
+    
+    <script src="{{ url_for('static', filename='plugins/goodlayers-core/include/js/page-builder.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery/jquery.blockUI.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery/ui/effect.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.mmenu.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.superfish.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='plugins/quform/js/plugins.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='plugins/quform/js/scripts.js') }}" type="text/javascript"></script> -->
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script> -->
+</body>
+
+
+</html>

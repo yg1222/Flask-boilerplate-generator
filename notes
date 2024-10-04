@@ -1,0 +1,9 @@
+restrict to use company domains to match company users
+
+
+super user can create accounts and assign them as a customer or carrier
+
+when users are signing up, they can pick their account if it exists already or go ahead and register an accoung with themselves as an admin
+
+
+FLASK_APP=wsgi.py flask run -p 5000 --debug

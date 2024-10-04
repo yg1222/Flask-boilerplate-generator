@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+.vscode/
+
+# Environment variables
+.env
+
+# Flask cache
+instance/
+*.sqlite3
+
+# Logs
+*.log
+
+# Virtual environment
+venv/
+pip-selfcheck.json
+
+# Pytest cache
+.cache/
+
+# Migrations
+migrations/
+
+app/templates/index2.html

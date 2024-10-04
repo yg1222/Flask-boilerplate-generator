@@ -1,0 +1,37 @@
+.forgot_password_link {
+	margin-left: 2rem;
+    color: #acc6f3 !important;
+}
+.forgot_password_link:hover {
+	margin-left: 2rem;
+	color: #eee !important;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* or 'flex-start', 'center', etc. */
+}
+
+.errors-container {
+    display: none;
+    background-color: #f8d7da; /* Light red background */
+    color: #721c24; /* Darker red text */
+    border: 1px solid #f5c6cb; /* Light red border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Padding around the text */
+    margin: 20px 0; /* Margin above and below */
+    font-family: Arial, sans-serif; /* Font style */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 0px 20px 35px 125px;
+    padding: 5px 25px 5px 25px;
+}
+
+.error-list {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.error-list li {
+    margin: 5px 0; /* Space between list items */
+}

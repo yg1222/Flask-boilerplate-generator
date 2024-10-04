@@ -1,0 +1,221 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block head %}
+{{ super() }}
+
+<link
+    href="https://fonts.googleapis.com/css?family=Assistant%3A200%2C300%2Cregular%2C600%2C700%2C800%7CKarla%3Aregular%2Citalic%2C700%2C700italic%7CPT+Sans%3Aregular%2Citalic%2C700%2C700italic&amp;subset=latin%2Chebrew%2Clatin-ext%2Ccyrillic-ext%2Ccyrillic&amp;ver=5.0.3"
+    media="all" rel="stylesheet" type="text/css" />
+<link href="{{ url_for('static', filename='plugins/goodlayers-core/plugins/combine/style.css') }}" media="all"
+    rel="stylesheet" type="text/css" />
+<link href="{{ url_for('static', filename='plugins/goodlayers-core/include/css/page-builder.css') }}" media="all"
+    rel="stylesheet" type="text/css" />
+<link href="{{ url_for('static', filename='plugins/revslider/public/assets/css/settings.css') }}" media="all"
+    rel="stylesheet" type="text/css" />
+<link href="{{ url_for('static', filename='plugins/quform/css/base.css') }}" media="all" rel="stylesheet"
+    type="text/css" />
+<link href="{{ url_for('static', filename='css/style-core.css') }}" media="all" rel="stylesheet" type="text/css" />
+<link href="{{ url_for('static', filename='css/logisco-style-custom.css') }}" media="all" rel="stylesheet"
+    type="text/css" />
+<link href="{{ url_for('static', filename='css/style.css') }}" media="all" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+{% block content %}
+
+<div class="logisco-page-wrapper" id="logisco-page-wrapper">
+    <div class="gdlr-core-page-builder-body">
+        <div class="gdlr-core-pbf-wrapper" id="gdlr-core-wrapper-1">
+
+            <div class="gdlr-core-pbf-wrapper-content gdlr-core-js">
+                <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+
+                    <div class="gdlr-core-pbf-column gdlr-core-column-30" data-skin="Homepage Enquiry Form"
+                        id="gdlr-core-column-2">
+                        <div id="errors-container" class="errors-container">
+                            <ul class="error-list">
+                            </ul>
+                        </div>
+                        <div class="gdlr-core-pbf-column-content-margin gdlr-core-js"
+                            style="margin: 0px 20px 35px 125px;padding: 45px 25px 5px 25px;">
+                            <div class="login-form-div gdlr-core-pbf-background-wrap"
+                                style="background-color: #212121 ;opacity: 0.77 ;border-radius: 3px 3px 3px 3px;-moz-border-radius: 3px 3px 3px 3px;-webkit-border-radius: 3px 3px 3px 3px;">
+                            </div>
+                            <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js">
+                                <div class="gdlr-core-pbf-element">
+                                    <div
+                                        class="gdlr-core-title-item gdlr-core-item-pdb clearfix gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr">
+                                        <div class="gdlr-core-title-item-title-wrap">
+                                            <h3 class="gdlr-core-title-item-title gdlr-core-skin-title"
+                                                style="font-size: 22px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #ffffff ;">
+                                                Signup<span
+                                                    class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>
+                                            </h3>
+                                            <hr>
+                                        </div>
+                                        <span
+                                            class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption"
+                                            style="font-style: normal ;color: #ccc ;">User
+                                            information:
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="gdlr-core-pbf-element">
+                                    <div class="gdlr-core-contact-form-7-item gdlr-core-item-pdlr gdlr-core-item-pdb"
+                                        style="padding-bottom: 0px ;">
+                                        <div class="wpcf7" dir="ltr" id="wpcf7-f6725-p2039-o1" lang="en-US" role="form">
+                                            <div class="screen-reader-response">
+
+
+
+                                                <form action="" class="quform" method="post" id="signup_form">
+                                                    {{ form.csrf_token }}
+                                                    <div class="quform-elements">
+                                                        <div class="quform-element flex-container">
+                                                            <span class="wpcf7-form-control-wrap first_name name">
+                                                                {{ form.first_name(size=30) }}
+                                                                {% for error in form.first_name.errors %}
+                                                                <span style="color: rgba(163, 60, 0, 0.423);">{{ error
+                                                                    }}</span>
+                                                                {% endfor %}
+
+                                                            </span>
+
+                                                            <span class="wpcf7-form-control-wrap last_name name">
+                                                                {{ form.last_name(size=30) }}<br>
+                                                                {% for error in form.last_name.errors %}
+                                                                <span style="color: rgba(163, 60, 0, 0.423);">{{ error
+                                                                    }}</span>
+                                                                {% endfor %}
+
+                                                            </span>
+                                                        </div>
+                                                        <div class="quform-element">
+                                                            <span class="wpcf7-form-control-wrap your-email email">
+                                                                {{ form.email(size=30) }}<br>
+                                                                {% for error in form.email.errors %}
+                                                                <span style="color: rgba(163, 60, 0, 0.423);">{{ error
+                                                                    }}</span>
+                                                                {% endfor %}
+
+                                                            </span>
+                                                            <span class="wpcf7-form-control-wrap password"></span>
+
+                                                            {{ form.password(size=30) }}<br>
+                                                            {% for error in form.password.errors %}
+                                                            <span style="color: rgba(163, 60, 0, 0.423);">{{ error
+                                                                }}</span>
+                                                            {% endfor %}
+                                                            </span>
+                                                        </div>
+                                                        <div class="quform-element">
+                                                            <span
+                                                            class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption"
+                                                            style="font-style: normal ;color: #ccc ;">Company
+                                                            information.
+                                                        </span>
+                                                        </div>
+                                                        <br>
+
+                                                        <div class="quform-element">
+                                                            <span class="wpcf7-form-control-wrap company_name name"></span>
+                                                                {{ form.company_name(size=30) }}
+                                                                {% for error in form.first_name.errors %}
+                                                                <span style="color: rgba(163, 60, 0, 0.423);">{{ error
+                                                                    }}</span>
+                                                                {% endfor %}
+
+                                                            </span>
+                                                        </div>
+                                                        <div class="quform-element flex-container">
+                                                            <span class="wpcf7-form-control-wrap phone">
+                                                                {{ form.company_phone(size=30) }}<br>
+                                                                {% for error in form.last_name.errors %}
+                                                                <span style="color: rgba(163, 60, 0, 0.423);">{{ error
+                                                                    }}</span>
+                                                                {% endfor %}
+
+                                                            </span>
+                                                            <span class="wpcf7-form-control-wrap phone">
+                                                                {{ form.fax(size=30) }}<br>
+                                                                {% for error in form.last_name.errors %}
+                                                                <span style="color: rgba(163, 60, 0, 0.423);">{{ error
+                                                                    }}</span>
+                                                                {% endfor %}
+
+                                                            </span>
+                                                        </div>
+                                                        
+
+                                                        <div class="quform-element flex-container">
+                                                            <span class="wpcf7-form-control-wrap address"></span>
+                                                                {{ form.street_address(size=30) }}
+                                                                {% for error in form.first_name.errors %}
+                                                                <span style="color: rgba(163, 60, 0, 0.423);">{{ error
+                                                                    }}</span>
+                                                                {% endfor %}
+
+                                                            </span>
+                                                            <span class="wpcf7-form-control-wrap city"></span>
+                                                                {{ form.city(size=30) }}<br>
+                                                                {% for error in form.last_name.errors %}
+                                                                <span style="color: rgba(163, 60, 0, 0.423);">{{ error
+                                                                    }}</span>
+                                                                {% endfor %}
+
+                                                            </span>
+                                                        </div>
+                                                        {{ form.disappearing_info }}
+                                                        <div class="quform-element flex-container">
+
+                                                            <span class="wpcf7-form-control-wrap province">
+                                                                {{ form.province(size=30) }}<br>
+                                                                {% for error in form.last_name.errors %}
+                                                                <span style="color: rgba(163, 60, 0, 0.423);">{{ error
+                                                                    }}</span>
+                                                                {% endfor %}
+
+                                                            </span>
+                                                            <span class="wpcf7-form-control-wrap postal">
+                                                                {{ form.postal(size=30) }}<br>
+                                                                {% for error in form.last_name.errors %}
+                                                                <span style="color: rgba(163, 60, 0, 0.423);">{{ error
+                                                                    }}</span>
+                                                                {% endfor %}
+
+                                                            </span>
+                                                        </div>
+
+
+
+                                                        <!-- Begin Submit button -->
+                                                        <div class="quform-submit">
+                                                            <div class="quform-submit-inner signup-buttons-div"
+                                                                style="display: flex;">
+                                                                {{ form.signup() }}
+                                                                <a class="forgot_password_link"
+                                                                    href="{{ url_for('auth.forgot_password') }}">Forgot
+                                                                    Password?</a>
+                                                            </div>
+                                                            <div class="quform-loading-wrap"><span
+                                                                    class="quform-loading"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
